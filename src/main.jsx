@@ -7,7 +7,7 @@ import { BrowserRouter } from 'react-router-dom'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
-      <App />
+      <App className="font-[Lausanne-300]" />
     </BrowserRouter>
   </StrictMode>,
 )
