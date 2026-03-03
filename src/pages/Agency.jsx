@@ -5,14 +5,14 @@ import React, { useRef } from 'react'
 
 const Agency = () => {
     const imageArray = [
-        "/teamMembers/Carl_480x640.jpg?w=480&h=640&fit=crop&s=f0a84706bc91a6f505e8ad35f520f0b7",
-        "/teamMembers/Olivier_480x640.jpg?w=480&h=640&fit=crop&s=c13569c0753117d04f1a93cf7b446d64",
-        "/teamMembers/ChantalG_480x640.jpg?w=480&h=640&fit=crop&s=13093769c4a19cecd291ddcccd898991",
-        "/teamMembers/Michele_480X640.jpg?w=480&h=640&fit=crop&s=ce85dc6d140947736baa739d0e59dab2",
-        "/teamMembers/MEL_480X640.jpg?w=480&h=640&fit=crop&s=07c9bfee89816720b873e6748a276af6",
-        "/teamMembers/CAMILLE_480X640_2.jpg?w=480&h=640&fit=crop&s=74317575b2d72fd11c5296615c383e4a",
-        "/teamMembers/MEGGIE_480X640_2.jpg?w=480&h=640&fit=crop&s=3604b19f8fc7b40f517954147698d847",
-        "/teamMembers/joel_480X640_3.jpg?w=480&h=640&fit=crop&s=1cadbf143b3aa916b1b414464acbb4d6",
+        "/teamMembers/Carl_480x640.jpg",
+        "/teamMembers/Olivier_480x640.jpg",
+        "/teamMembers/ChantalG_480x640.jpg",
+        "/teamMembers/Michele_480X640.jpg",
+        "/teamMembers/MEL_480X640.jpg",
+        "/teamMembers/CAMILLE_480X640_2.jpg",
+        "/teamMembers/MEGGIE_480X640_2.jpg",
+        "/teamMembers/joel_480X640_3.jpg",
         // "",
         // "",
         // "",
