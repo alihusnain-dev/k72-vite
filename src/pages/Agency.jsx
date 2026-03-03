@@ -19,7 +19,9 @@ const Agency = () => {
     const agencyBody = useRef(null)
     const section3 = useRef(null)
     const imgRef = useRef(null)
+
     useGSAP(function () {
+        // Hero Image Pin & Sprite Animation
         gsap.to(imageDiv.current, {
             scrollTrigger: {
                 trigger: imageDiv.current,
@@ -35,6 +37,7 @@ const Agency = () => {
             },
         })
 
+        // Background Color Toggle for Section 3
         gsap.to(section3.current, {
             scrollTrigger: {
                 trigger: section3.current,
@@ -48,11 +51,46 @@ const Agency = () => {
             },
         })
 
-    })
+        // Pinning only the images in Section 3
+        const sections = gsap.utils.toArray(".team-section")
+        sections.forEach((section, i) => {
+            const img = section.querySelector("img")
+            ScrollTrigger.create({
+                trigger: section,
+                start: "top top",
+                end: "bottom top",
+                pin: img,
+                pinSpacing: false,
+            })
+        })
+
+        // Infinite marquee animations for names
+        gsap.to(".marquee-right", {
+            x: "-100%",
+            repeat: -1,
+            duration: 6,
+            ease: "none",
+        })
+        gsap.to(".marquee-left", {
+            x: "100%",
+            repeat: -1,
+            duration: 6,
+            ease: "none",
+        })
+
+    }, { scope: agencyBody })
+
+    const teamMembers = [
+        { name: "BÉATRICE", lastName: "ROUSSIN", role: "Strategist", img: "/teamMembers/Carl_480x640.jpg" },
+        { name: "CARL", lastName: "MORIN", role: "Creative Director", img: "/teamMembers/MEL_480X640.jpg" },
+        { name: "MICHELE", lastName: "TREMBLAY", role: "Producer", img: "/teamMembers/Michele_480X640.jpg" },
+        { name: "CAMILLE", lastName: "BOUCHER", role: "Content Specialist", img: "/teamMembers/CAMILLE_480X640_2.jpg" },
+    ]
+
     return (
-        <div ref={agencyBody} className='transition-all duration-1000 ease'>
+        <div ref={agencyBody} className='transition-all duration-1000 ease bg-white text-black'>
             <div className='section1'>
-                <div ref={imageDiv} className="absolute  top-[29vh] left-[30%] w-[15vw] rounded-3xl overflow-hidden">
+                <div ref={imageDiv} className="absolute top-[29vh] left-[30%] w-[15vw] rounded-3xl overflow-hidden z-10">
                     <img ref={imgRef} className='w-full h-full object-cover ' src="/teamMembers/Carl_480x640.jpg" alt="" />
                 </div>
                 <div className='relative w-full h-full flex flex-col items-center font-[Lausanne-500]'>
@@ -66,8 +104,8 @@ const Agency = () => {
                     </div>
                 </div>
             </div>
-            <div className='section2 my-32 md:my-42 lg:my-52 h-full w-screen flex flex-col lg:flex-row px-10 md:px-20 lg:px-32 gap-4 font-medium md:text-xl'>
 
+            <div className='section2 my-32 md:my-42 lg:my-52 h-full w-screen flex flex-col lg:flex-row px-10 md:px-20 lg:px-32 gap-4 font-medium md:text-xl'>
                 <div className="w-full lg:w-[80%] mx-auto grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div className='h-30 md:h-52 lg:h-72 w-full'>Expertises</div>
                     <div className='h-30 md:h-52 lg:h-72 w-full'>
@@ -82,21 +120,28 @@ const Agency = () => {
                     <div className='h-30 md:h-52 lg:h-72 w-full'>Our Creative_ Simmering in an environment where talent can come to a full boil. Encouraged to become the best versions of ourselves.</div>
                     <div className='h-30 md:h-52 lg:h-72 w-full'>
                         Our Culture_ We’re open to each other. Period. The team works together to create a space that makes us proud.
-
                     </div>
                 </div>
             </div>
-            <div ref={section3} className="section-3 h-screen my-32 md:my-42 lg:my-52 w-full border border-white ">
-                <div className='relative w-full h-screen'>
-                    <marquee behavior="smooth" direction="" scrollamount={50} className='text-[20vw] leading-[17vw] text-center '>
-                        BÉATRICE</marquee>
 
-                </div>
-                {/* ROUSSIN
-Strategist */}
+            <div ref={section3} className="section-3 h-full mt-10 md:mt-20 lg:mt-32 w-full ">
+                {teamMembers.map((member, index) => (
+                    <div
+                        key={index}
+                        className='team-section relative w-full h-screen overflow-hidden flex items-center flex-col justify-center'
+                        style={{ zIndex: index + 1 }}
+                    >
+                        <div className='absolute top-[20%] left-0 marquee-right whitespace-nowrap transform translate-x-[110%] flex items-center' >
+                            <p className='text-primary text-[12vw] leading-none uppercase'>{member.name}</p>
+                        </div>
+                        <img className='z-1 h-full object-contain rounded-3xl mx-auto py-10' src={member.img} alt={member.name} />
+                        <div className='z-2 absolute bottom-[20%] left-0 marquee-left whitespace-nowrap transform translate-x-[-100%] flex items-center gap-20' >
+                            <p className='text-primary text-[12vw] leading-none uppercase'>{member.lastName}</p>
+                            <p className='leading-none uppercase md:text-2xl lg:text-4xl'>{member.role}</p>
+                        </div>
+                    </div>
+                ))}
             </div>
-
-
         </div>
     )
 }

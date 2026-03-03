@@ -41,7 +41,7 @@ const StairAnimation = ({ children }) => {
 
     return (
         <>
-            <div ref={stairRef} className='w-screen h-screen z-[9999] fixed top-0 left-0 pointer-events-none'>
+            <div ref={stairRef} className='w-screen h-screen z-9999 fixed top-0 left-0 pointer-events-none'>
                 <div className="w-full h-full flex">
                     <div className="stair w-1/5 h-full bg-black"></div>
                     <div className="stair w-1/5 h-full bg-black"></div>
