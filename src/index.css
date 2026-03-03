@@ -14,6 +14,22 @@
   font-style: normal;
 }
 
+:root {
+  --primary-color: #D3FD50;
+}
+
 body {
   overflow-x: hidden;
+}
+
+.bg-primary {
+  background-color: var(--primary-color);
+}
+
+.text-primary {
+  color: var(--primary-color);
+}
+
+@theme {
+  --color-primary: var(--primary-color);
 }

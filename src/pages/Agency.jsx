@@ -86,7 +86,15 @@ const Agency = () => {
                     </div>
                 </div>
             </div>
-            <div ref={section3} className="section-3 my-32 md:my-42 lg:my-52 w-full h-screen"></div>
+            <div ref={section3} className="section-3 h-screen my-32 md:my-42 lg:my-52 w-full border border-white ">
+                <div className='relative w-full h-screen'>
+                    <marquee behavior="smooth" direction="" scrollamount={50} className='text-[20vw] leading-[17vw] text-center '>
+                        BÉATRICE</marquee>
+
+                </div>
+                {/* ROUSSIN
+Strategist */}
+            </div>
 
 
         </div>
