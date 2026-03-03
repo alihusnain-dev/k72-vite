@@ -16,6 +16,8 @@ const Agency = () => {
     ]
     gsap.registerPlugin(ScrollTrigger)
     const imageDiv = useRef(null)
+    const agencyBody = useRef(null)
+    const section3 = useRef(null)
     const imgRef = useRef(null)
     useGSAP(function () {
         gsap.to(imageDiv.current, {
@@ -32,9 +34,23 @@ const Agency = () => {
                 }
             },
         })
+
+        gsap.to(section3.current, {
+            scrollTrigger: {
+                trigger: section3.current,
+                start: "top 90%",
+                end: "bottom 90%",
+                scrub: 2,
+                onToggle: (self) => {
+                    agencyBody.current.style.backgroundColor = self.isActive ? "black" : "white"
+                    agencyBody.current.style.color = self.isActive ? "white" : "black"
+                }
+            },
+        })
+
     })
     return (
-        <>
+        <div ref={agencyBody} className='transition-all duration-1000 ease'>
             <div className='section1'>
                 <div ref={imageDiv} className="absolute  top-[29vh] left-[30%] w-[15vw] rounded-3xl overflow-hidden">
                     <img ref={imgRef} className='w-full h-full object-cover ' src="/teamMembers/Carl_480x640.jpg" alt="" />
@@ -70,10 +86,10 @@ const Agency = () => {
                     </div>
                 </div>
             </div>
-            <div className="section-3. my-32 md:my-42 lg:my-52 w-full h-screen bg-black"></div>
+            <div ref={section3} className="section-3 my-32 md:my-42 lg:my-52 w-full h-screen"></div>
 
 
-        </>
+        </div>
     )
 }
 
