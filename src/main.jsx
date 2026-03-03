@@ -8,7 +8,7 @@ import StairAnimation from './components /common/StairAnimation'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
-      <StairAnimation>
+      <StairAnimation >
         <App className="font-[Lausanne-300]" />
       </StairAnimation>
     </BrowserRouter>
