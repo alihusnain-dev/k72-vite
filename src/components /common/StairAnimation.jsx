@@ -1,9 +1,13 @@
 import React, { useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
+import { useLocation } from 'react-router-dom'
 
-const StairAnimation = () => {
+const StairAnimation = ({ children }) => {
+    const currentPath = useLocation().pathname
+
     const stairRef = useRef(null)
+
     useGSAP(function () {
         const tl = gsap.timeline()
         tl.from(stairRef.current, {
@@ -25,7 +29,7 @@ const StairAnimation = () => {
             display: "none",
         })
 
-    })
+    }, [currentPath])
     return (
         <div ref={stairRef} className='w-screen h-screen z-10 fixed top-0 left-0'>
             <div className="w-full h-full flex">
