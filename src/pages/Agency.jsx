@@ -13,11 +13,6 @@ const Agency = () => {
         "/teamMembers/CAMILLE_480X640_2.jpg",
         "/teamMembers/MEGGIE_480X640_2.jpg",
         "/teamMembers/joel_480X640_3.jpg",
-        // "",
-        // "",
-        // "",
-        // "",
-        // "",
     ]
     gsap.registerPlugin(ScrollTrigger)
     const imageDiv = useRef(null)
@@ -42,7 +37,7 @@ const Agency = () => {
         <>
             <div className='section1'>
                 <div ref={imageDiv} className="absolute  top-[29vh] left-[30%] w-[15vw] rounded-3xl overflow-hidden">
-                    <img ref={imgRef} className='w-full h-full object-cover ' src="/teamMembers/Carl_480x640.jpg?w=480&h=640&fit=crop&s=f0a84706bc91a6f505e8ad35f520f0b7" alt="" />
+                    <img ref={imgRef} className='w-full h-full object-cover ' src="/teamMembers/Carl_480x640.jpg" alt="" />
                 </div>
                 <div className='relative w-full h-full flex flex-col items-center font-[Lausanne-500]'>
                     <div className='min-h-[55vh] w-full'></div>
@@ -55,7 +50,27 @@ const Agency = () => {
                     </div>
                 </div>
             </div>
-            <div className='section2 h-screen w-full'></div>
+            <div className='section2 my-32 md:my-42 lg:my-52 h-full w-screen flex flex-col lg:flex-row px-10 md:px-20 lg:px-32 gap-4 font-medium md:text-xl'>
+
+                <div className="w-full lg:w-[80%] mx-auto grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div className='h-30 md:h-52 lg:h-72 w-full'>Expertises</div>
+                    <div className='h-30 md:h-52 lg:h-72 w-full'>
+                        Strategy <br />
+                        Advertising <br />
+                        Creative <br />
+                        Content <br />
+                        Production <br />
+                    </div>
+                    <div className='h-30 md:h-52 lg:h-72 w-full'></div>
+                    <div className='h-30 md:h-52 lg:h-72 w-full'>Our Work_ Born in curiosity, raised by dedication and fed with a steady diet of creativity.</div>
+                    <div className='h-30 md:h-52 lg:h-72 w-full'>Our Creative_ Simmering in an environment where talent can come to a full boil. Encouraged to become the best versions of ourselves.</div>
+                    <div className='h-30 md:h-52 lg:h-72 w-full'>
+                        Our Culture_ We’re open to each other. Period. The team works together to create a space that makes us proud.
+
+                    </div>
+                </div>
+            </div>
+            <div className="section-3. my-32 md:my-42 lg:my-52 w-full h-screen bg-black"></div>
 
 
         </>
