@@ -1,17 +1,66 @@
-# React + Vite
+# K72 Agency Clone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a high-fidelity clone of the [k72.ca](https://k72.ca/) website, focusing on premium animations, architectural typography, and smooth page transitions.
 
-Currently, two official plugins are available:
+Made with ❤️ by **Muhammad Ali Husnain** - [@alihusnain-dev](https://github.com/alihusnain-dev)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React + Vite**: For a fast, modern development environment.
+- **GSAP (GreenSock Animation Platform)**: Powering all the advanced scroll triggers, horizontal marquees, and the "stair" page transitions.
+- **Tailwind CSS**: For utility-first styling and responsive layouts.
+- **React Router Dom**: For seamless client-side navigation.
 
-## Expanding the ESLint configuration
+## 🌟 Key Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# k72-vite
+### 1. **Premium Stair Transitions**
+A custom GSAP-powered page transition that resets and triggers on every route change, providing a smooth, high-end feel as you navigate between pages.
+
+### 2. **Hero Sprite Animation**
+In the Agency page, the hero image changes dynamically based on the scroll progress, cycling through a team member gallery.
+
+### 3. **Image Stacking & Pinning**
+Team sections in "Section 3" feature a sophisticated stacking effect where images pin to the viewport while names and roles scroll past, eventually layered over by the subsequent member.
+
+### 4. **GSAP-Powered Marquees**
+Replaced the legacy HTML `<marquee>` with high-performance, infinite GSAP horizontal loops for a smoother architectural vibe.
+
+---
+
+## 🛠️ Getting Started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (v16.0 or higher)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+
+### Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/alihusnain-dev/k72-vite.git
+   cd k72-vite
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
+
+4. **Build for production:**
+   ```bash
+   npm run build
+   ```
+
+---
+
+## 📜 License
+
+This project is created for educational and portfolio purposes. All original design rights belong to [K72](https://k72.ca/).
