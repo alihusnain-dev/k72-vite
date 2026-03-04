@@ -5,6 +5,9 @@ import App from './App.jsx'
 import { BrowserRouter } from 'react-router-dom'
 import StairAnimation from './components /common/StairAnimation'
 import Navbar from './components /common/Navbar.jsx'
+import LocomotiveScroll from 'locomotive-scroll';
+
+const locomotiveScroll = new LocomotiveScroll();
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
