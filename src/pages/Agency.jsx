@@ -89,24 +89,25 @@ const Agency = () => {
 
     return (
         <div ref={agencyBody} className='transition-all duration-1000 ease bg-white text-black'>
-            <div >
-                <div ref={imageDiv} className="absolute top-[29vh] left-[30%] w-[15vw] rounded-3xl overflow-hidden z-0
-                ">
-                    <img ref={imgRef} className='w-full h-full object-cover ' src="/teamMembers/Carl_480x640.jpg" alt="" />
+            <div>
+                <div ref={imageDiv} className="absolute top-[35vh] md:top-[29vh] left-[25%] md:left-[30%] w-[50vw] md:w-[15vw] rounded-2xl md:rounded-3xl overflow-hidden z-0">
+                    <img ref={imgRef} className='w-full h-full object-cover' src="/teamMembers/Carl_480x640.jpg" alt="" />
                 </div>
                 <div className='relative w-full h-full flex flex-col items-center font-[Lausanne-500]'>
-                    <div className='min-h-[55vh] w-full'></div>
-                    <h1 className='text-[20vw] leading-[17vw] text-center '>
+                    <div className='min-h-[60vh] md:min-h-[55vh] w-full'></div>
+                    <h1 className='text-[22vw] md:text-[20vw] leading-[19vw] md:leading-[17vw] text-center'>
                         SEVEN7Y <br />
                         TWO
                     </h1>
-                    <div className='w-full mt-5 px-20'>
-                        <p className="w-[60%] float-end text-6xl leading-none"><span className='pl-20'></span> We’re inquisitive and open-minded, and we make sure creativity crowds out ego from every corner. A brand is a living thing, with values, a personality and a story. If we ignore that, we can achieve short-term success, but not influence that goes the distance. We bring that perspective to every brand story we help tell.</p>
+                    <div className='w-full mt-10 md:mt-5 px-6 md:px-20'>
+                        <p className="w-full md:w-[60%] md:float-end text-3xl md:text-6xl leading-tight md:leading-none text-center md:text-left">
+                            <span className='hidden md:inline-block pl-20'></span> We’re inquisitive and open-minded, and we make sure creativity crowds out ego from every corner. A brand is a living thing, with values, a personality and a story. If we ignore that, we can achieve short-term success, but not influence that goes the distance. We bring that perspective to every brand story we help tell.
+                        </p>
                     </div>
                 </div>
             </div>
 
-            <div className='my-32 md:my-42 lg:my-52 h-full w-screen flex flex-col lg:flex-row px-10 md:px-20 lg:px-32 gap-4 font-medium md:text-xl'>
+            <div className='my-20 md:my-32 lg:my-52 w-full flex flex-col lg:flex-row px-6 md:px-20 lg:px-32 gap-4 font-medium md:text-xl'>
                 <div className="w-full lg:w-[80%] mx-auto grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div className='h-30 md:h-52 lg:h-72 w-full'>Expertises</div>
                     <div className='h-30 md:h-52 lg:h-72 w-full'>
@@ -132,14 +133,15 @@ const Agency = () => {
                         className='team-section relative w-full h-screen overflow-hidden flex items-center flex-col justify-center'
                         style={{ zIndex: index + 1 }}
                     >
-                        <div className='absolute top-[20%] left-0 marquee-right whitespace-nowrap transform translate-x-[110%] flex items-center' >
-                            <p className='text-primary text-[12vw] leading-none uppercase'>{member.name}</p>
+                        <div className='absolute top-[15%] md:top-[20%] left-0 marquee-right whitespace-nowrap transform translate-x-[110%] flex items-center' >
+                            <p className='text-primary text-[15vw] md:text-[12vw] leading-none uppercase'>{member.name}</p>
                         </div>
 
-                        <img className='z-1 h-screen mx-auto rounded-2xl object-cover' src={member.img} alt={member.name} />
-                        <div className='z-2 absolute bottom-[20%] left-0 marquee-left whitespace-nowrap transform translate-x-[-100%] flex items-center gap-20' >
-                            <p className='text-primary text-[12vw] leading-none uppercase'>{member.lastName}</p>
-                            <p className='leading-none uppercase md:text-2xl lg:text-4xl'>{member.role}</p>
+                        <img className='z-1 w-[90%] md:w-auto h-[60vh] md:h-screen mx-auto rounded-xl md:rounded-2xl object-cover' src={member.img} alt={member.name} />
+
+                        <div className='z-2 absolute bottom-[15%] md:bottom-[20%] left-0 marquee-left whitespace-nowrap transform translate-x-[-100%] flex items-center gap-10 md:gap-20' >
+                            <p className='text-primary text-[15vw] md:text-[12vw] leading-none uppercase'>{member.lastName}</p>
+                            <p className='leading-none uppercase text-lg md:text-2xl lg:text-4xl'>{member.role}</p>
                         </div>
                     </div>
                 ))}
