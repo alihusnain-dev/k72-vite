@@ -4,11 +4,13 @@ import './index.css'
 import App from './App.jsx'
 import { BrowserRouter } from 'react-router-dom'
 import StairAnimation from './components /common/StairAnimation'
+import Navbar from './components /common/Navbar.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
       <StairAnimation >
+        <Navbar />
         <App className="font-[Lausanne-300]" />
       </StairAnimation>
     </BrowserRouter>
