@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Navbar = () => {
     return (
-        <div className='fixed top-0 left-0 w-full '>
+        <div className='fixed top-0 left-0 w-full z-10'>
             <div className="flex items-start justify-between w-full h-full">
                 <Link to="/" className='p-4'>
                     <svg xmlns="http://www.w3.org/2000/svg" width="103" height="44" viewBox="0 0 103 44">

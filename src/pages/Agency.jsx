@@ -89,8 +89,9 @@ const Agency = () => {
 
     return (
         <div ref={agencyBody} className='transition-all duration-1000 ease bg-white text-black'>
-            <div className='section1'>
-                <div ref={imageDiv} className="absolute top-[29vh] left-[30%] w-[15vw] rounded-3xl overflow-hidden z-10">
+            <div >
+                <div ref={imageDiv} className="absolute top-[29vh] left-[30%] w-[15vw] rounded-3xl overflow-hidden z-0
+                ">
                     <img ref={imgRef} className='w-full h-full object-cover ' src="/teamMembers/Carl_480x640.jpg" alt="" />
                 </div>
                 <div className='relative w-full h-full flex flex-col items-center font-[Lausanne-500]'>
@@ -105,7 +106,7 @@ const Agency = () => {
                 </div>
             </div>
 
-            <div className='section2 my-32 md:my-42 lg:my-52 h-full w-screen flex flex-col lg:flex-row px-10 md:px-20 lg:px-32 gap-4 font-medium md:text-xl'>
+            <div className='my-32 md:my-42 lg:my-52 h-full w-screen flex flex-col lg:flex-row px-10 md:px-20 lg:px-32 gap-4 font-medium md:text-xl'>
                 <div className="w-full lg:w-[80%] mx-auto grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div className='h-30 md:h-52 lg:h-72 w-full'>Expertises</div>
                     <div className='h-30 md:h-52 lg:h-72 w-full'>
