@@ -135,7 +135,10 @@ const Agency = () => {
                         <div className='absolute top-[20%] left-0 marquee-right whitespace-nowrap transform translate-x-[110%] flex items-center' >
                             <p className='text-primary text-[12vw] leading-none uppercase'>{member.name}</p>
                         </div>
-                        <img className='z-1 h-full object-contain rounded-3xl mx-auto py-10' src={member.img} alt={member.name} />
+                        <div className="z-1 h-screen w-full mx-auto py-10 rounded-4xl overflow-hidden">
+
+                            <img className='h-full w-full object-contain' src={member.img} alt={member.name} />
+                        </div>
                         <div className='z-2 absolute bottom-[20%] left-0 marquee-left whitespace-nowrap transform translate-x-[-100%] flex items-center gap-20' >
                             <p className='text-primary text-[12vw] leading-none uppercase'>{member.lastName}</p>
                             <p className='leading-none uppercase md:text-2xl lg:text-4xl'>{member.role}</p>
